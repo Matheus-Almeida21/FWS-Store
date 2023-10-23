@@ -41,6 +41,10 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
   );
 
   useEffect(() => {
+    // Perform localStorage action
+    const item = localStorage.getItem('key')
+  }, [])
+  useEffect(() => {
     localStorage.setItem("@fsw-store/cart-products", JSON.stringify(products));
   }, [products]);
 
